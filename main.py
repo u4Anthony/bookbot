@@ -6,8 +6,6 @@ def main():
     for f in listdir(book_path):
         if isfile(join(book_path, f)):
             book_report(join(book_path, f))
-    frankenstein_path = 'books/frankenstein.txt'
-    # book_report(frankenstein_path)
 
 def book_report(book_path):
     book_title = book_path.split('/')[1]
