@@ -9,11 +9,12 @@ def main():
 
 def get_char_count(contents):
     char_count = {}
-    for char in contents.lower():
-        if char in char_count.keys():
-            char_count[char] += 1
+    for char in contents:
+        lower_char = char.lower()
+        if lower_char in char_count.keys():
+            char_count[lower_char] += 1
         else:
-            char_count[char] = 1
+            char_count[lower_char] = 1
     return char_count
 
 def get_word_count(contents):
