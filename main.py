@@ -4,6 +4,17 @@ def main():
     frankenstein_content = get_book_content(frankenstein_path)
     frankenstein_word_count = get_word_count(frankenstein_content)
     print(f'{frankenstein_word_count} words found in {frankenstein_path}')
+    frankenstein_char_count = get_char_count(frankenstein_content)
+    print(frankenstein_char_count)
+
+def get_char_count(contents):
+    char_count = {}
+    for char in contents.lower():
+        if char in char_count.keys():
+            char_count[char] += 1
+        else:
+            char_count[char] = 1
+    return char_count
 
 def get_word_count(contents):
     word_count = len(contents.split())
